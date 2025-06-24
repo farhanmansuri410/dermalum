@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://dermalum.in/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Products Page -->
+  <url>
+    <loc>https://dermalum.in/products</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Categories -->
+  <url>
+    <loc>https://dermalum.in/baby-lotion</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dermalum.in/baby-shampoo</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dermalum.in/baby-body-wash</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dermalum.in/baby-oil</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://dermalum.in/about</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://dermalum.in/contact</loc>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>

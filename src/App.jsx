@@ -6,6 +6,7 @@ import Blog from "./pages/Blog";
 import Product from "./pages/Product";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContectUs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUs />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

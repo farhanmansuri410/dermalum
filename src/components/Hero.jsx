@@ -2,13 +2,49 @@ import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 
-const images = [
-  "/01.webp",
-  "/02.webp",
-  "/03.webp",
-  "/04.webp",
-  "/05.webp",
-  "/06.webp",
+const slides = [
+  {
+    src: "/01.webp",
+    title: "Gentle Nourishment with Dermalum Baby Lotion",
+    description:
+      "Enriched with Shea Butter, Almond Oil, Calendula, and Aloe Vera—Dermalum Baby Lotion deeply moisturizes and protects your baby’s sensitive skin.",
+  },
+  {
+    src: "/02.webp",
+    title: "Dermalum Baby Body Wash – Mild & Refreshing",
+    description:
+      "Infused with Aloe Vera, Rose, and Lavender Extracts, our Baby Body Wash gently cleanses while leaving your baby’s skin soft and aromatic.",
+  },
+  {
+    src: "/03.webp",
+    title: "Complete Baby Care Set – Lotion, Wash & Shampoo",
+    description:
+      "Get the full range of gentle care with our natural baby lotion, shampoo, and body wash—perfect for daily nourishment and protection.",
+  },
+  {
+    src: "/04.webp",
+    title: "Total Protection – Diaper Rash, Lotion & More",
+    description:
+      "From Diaper Rash Cream to Baby Moisturizing Cream, give your baby total skin protection with natural ingredients like Shea Butter and Vitamin E.",
+  },
+  {
+    src: "/05.webp",
+    title: "Nourish Baby’s Hair with Dermalum Baby Shampoo",
+    description:
+      "Packed with Calendula, Argan Oil, Moringa, and Aloe Vera, our Baby Shampoo soothes the scalp and strengthens hair while maintaining pH 5.5 balance.",
+  },
+  {
+    src: "/06.webp",
+    title: "Hydrating Baby Moisturizing Cream with Vitamin E",
+    description:
+      "Lock in moisture with Almond Oil, Ceramides, Oat Lipids, and Lavender—Dermalum’s lightweight Baby Moisturizing Cream keeps skin smooth all day.",
+  },
+  {
+    src: "/07.webp",
+    title: "Dermalum Diaper Rash Cream – Instant Relief",
+    description:
+      "Formulated with Shea Butter, Jojoba Oil, Almond Oil, Aloe Vera, and Zinc Oxide—our Diaper Rash Cream soothes and heals baby rashes effectively.",
+  },
 ];
 
 export default function Hero() {
@@ -27,10 +63,10 @@ export default function Hero() {
   return (
     <section
       aria-label="Hero Section"
-      className="w-full overflow-hidden bg-amber-100 mt-16"
+      className="w-full overflow-hidden bg-[#FEFAEE] mt-16"
     >
       <Slider {...settings}>
-        {images.map((src, index) => (
+        {slides.map((slide, index) => (
           <div key={index}>
             <div className="w-full h-auto md:h-[85vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 gap-6">
               {/* Left Content */}
@@ -41,10 +77,10 @@ export default function Hero() {
                 className="w-full md:w-1/2 text-center md:text-left py-8"
               >
                 <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 leading-snug">
-                  Pure & Gentle Baby Care with Dermalum
+                  {slide.title}
                 </h1>
                 <p className="text-base md:text-lg text-gray-600 mb-6">
-                  Nourish your baby’s delicate skin with natural ingredients like Shea Butter, Almond Oil, and Aloe Vera.
+                  {slide.description}
                 </p>
                 <a
                   href="/product"
@@ -62,7 +98,7 @@ export default function Hero() {
                 className="w-full md:w-1/2"
               >
                 <img
-                  src={src}
+                  src={slide.src}
                   alt={`Dermalum Baby Product ${index + 1}`}
                   className="w-full h-full object-contain max-h-[500px] mx-auto"
                   loading="lazy"

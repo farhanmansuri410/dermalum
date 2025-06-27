@@ -29,10 +29,10 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_4pz4bwb",     // Your Service ID
-        "template_83372b2",    // Your Template ID
+        "service_8m4bd56",     // Your Service ID
+        "template_9htt0wd",    // Your Template ID
         formData,
-        "KkNovwtNTP153Ivkp"    // Your Public Key
+        "aWZIZnLW7CK8ik5xY"    // Your Public Key
       )
       .then(
         () => {

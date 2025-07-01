@@ -40,6 +40,12 @@ const slides = [
       "Lock in moisture with Almond Oil, Ceramides, Oat Lipids, and Lavender—Dermalum’s lightweight Baby Moisturizing Cream keeps skin smooth all day.",
   },
   {
+    src: "/08.webp",
+    title: "Dermalum Baby Massage Oil – Gentle & Nourishing",
+    description:
+      "Enriched with Shea Butter, Jojoba Oil, and Olive Oil—Dermalum Baby Massage Oil is crafted to deeply nourish, soothe, and protect your baby's delicate skin.",
+  },
+  {
     src: "/07.webp",
     title: "Dermalum Diaper Rash Cream – Instant Relief",
     description:
@@ -100,7 +106,7 @@ export default function Hero() {
                 <img
                   src={slide.src}
                   alt={`Dermalum Baby Product ${index + 1}`}
-                  className="w-full h-full object-contain max-h-[500px] mx-auto"
+                  className="w-full h-full object-contain rounded-[10%] max-h-[500px] mx-auto"
                   loading="lazy"
                 />
               </motion.div>

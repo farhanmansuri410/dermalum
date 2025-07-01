@@ -39,6 +39,13 @@ const products = [
     link: "/product/baby-moisturizing-cream",
   },
   {
+  name: "Baby Massage Oil",
+  description: "Mineral Oil Free Massage Oil with Jojoba, Shea Butter & Olive Oil",
+  image: "/08.webp", // Ensure this image exists in your public directory
+  alt: "Dermalum Baby Massage Oil with Jojoba, Shea Butter & Olive Oil",
+  link: "/product/baby-massage-oil",
+},
+  {
     name: "Baby Care Combo",
     description: "Complete Kit for Baby Skin & Hair Care",
     image: "/04.webp",

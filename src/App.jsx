@@ -7,11 +7,13 @@ import Product from "./pages/Product";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContectUs";
 import Footer from "./components/Footer";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Product" element={<Product />} />

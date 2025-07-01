@@ -37,6 +37,15 @@ const products = [
     alt: "Dermalum Baby Moisturizing Cream with Vitamin E and Almond Oil",
     link: "/product/baby-moisturizing-cream",
   },
+
+  {
+    name: "Baby Massage Oil",
+    description:
+      "Mineral Oil Free Massage Oil with Jojoba, Shea Butter & Olive Oil",
+    image: "/08.webp", // Update path as per your setup
+    alt: "Dermalum Baby Massage Oil with Jojoba, Shea Butter & Olive Oil",
+    link: "/product/baby-massage-oil",
+  },
   {
     name: "Baby Care Combo",
     description: "Complete Kit for Baby Skin & Hair Care",
@@ -83,9 +92,11 @@ export default function ProductRange() {
                 <h3 className="text-xl font-semibold text-gray-700">
                   {product.name}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2">{product.description}</p>
+                <p className="text-sm text-gray-600 mt-2">
+                  {product.description}
+                </p>
                 <a
-                  href='/product'
+                  href="/product"
                   className="inline-block mt-4 px-5 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
                 >
                   View Product

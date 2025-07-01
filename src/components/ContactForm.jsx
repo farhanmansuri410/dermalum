@@ -29,10 +29,10 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_8m4bd56",     // Your Service ID
-        "template_9htt0wd",    // Your Template ID
+        "service_8m4bd56",     
+        "template_9htt0wd",    
         formData,
-        "aWZIZnLW7CK8ik5xY"    // Your Public Key
+        "aWZIZnLW7CK8ik5xY"    
       )
       .then(
         () => {
@@ -47,33 +47,36 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-pink-50 to-blue-100 py-20 px-4" id="contact">
-      <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-lg p-10">
+    <section className="bg-gradient-to-br from-pink-50 to-blue-100 py-16 px-4 sm:px-6 lg:px-8" id="contact">
+      <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl p-6 sm:p-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-10 text-center"
+          className="mb-8 text-center"
         >
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-3">
             Get in Touch with Dermalum Baby Care
           </h2>
-          <p className="text-gray-700 max-w-xl mx-auto">
+          <p className="text-gray-700 text-base sm:text-lg">
             Have questions about our products? Want to place an order? Send us a message and we’ll get back to you soon.
           </p>
         </motion.div>
 
         <motion.form
           onSubmit={handleSubmit}
-          className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-3xl max-w-xl mx-auto shadow-xl"
+          className="space-y-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
           {/* Name */}
-          <div className="relative z-0 w-full mb-8 group">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              Your Name
+            </label>
             <input
               type="text"
               name="name"
@@ -81,16 +84,15 @@ const ContactForm = () => {
               required
               value={formData.name}
               onChange={handleChange}
-              placeholder=" "
-              className="peer block w-full border-0 border-b-2 border-gray-300 bg-transparent py-3 px-0 text-gray-900 focus:border-blue-600 focus:outline-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <label htmlFor="name" className="form-label">
-              Your Name
-            </label>
           </div>
 
           {/* Phone */}
-          <div className="relative z-0 w-full mb-8 group">
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+              Contact Number
+            </label>
             <input
               type="tel"
               name="phone"
@@ -98,40 +100,35 @@ const ContactForm = () => {
               required
               value={formData.phone}
               onChange={handleChange}
-              placeholder=" "
-              className="peer block w-full border-0 border-b-2 border-gray-300 bg-transparent py-3 px-0 text-gray-900 focus:border-blue-600 focus:outline-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <label htmlFor="phone" className="form-label">
-              Contact Number
-            </label>
           </div>
 
           {/* Product Dropdown */}
-          <div className="relative z-0 w-full mb-8 group">
+          <div>
+            <label htmlFor="product" className="block text-sm font-medium text-gray-700 mb-1">
+              Interested Product
+            </label>
             <select
               name="product"
               id="product"
               required
               value={formData.product}
               onChange={handleChange}
-              className="peer block w-full border-0 border-b-2 border-gray-300 bg-transparent py-3 text-gray-900 focus:border-blue-600 focus:outline-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="" disabled hidden>
-                Select a Product
-              </option>
+              <option value="" disabled hidden>Select a Product</option>
               {productOptions.map((prod, idx) => (
-                <option key={idx} value={prod}>
-                  {prod}
-                </option>
+                <option key={idx} value={prod}>{prod}</option>
               ))}
             </select>
-            <label htmlFor="product" className="form-label">
-              Interested Product
-            </label>
           </div>
 
           {/* Email */}
-          <div className="relative z-0 w-full mb-8 group">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              Email Address
+            </label>
             <input
               type="email"
               name="email"
@@ -139,16 +136,15 @@ const ContactForm = () => {
               required
               value={formData.email}
               onChange={handleChange}
-              placeholder=" "
-              className="peer block w-full border-0 border-b-2 border-gray-300 bg-transparent py-3 px-0 text-gray-900 focus:border-blue-600 focus:outline-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <label htmlFor="email" className="form-label">
-              Email Address
-            </label>
           </div>
 
           {/* Message */}
-          <div className="relative z-0 w-full mb-8 group">
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              Message
+            </label>
             <textarea
               name="message"
               id="message"
@@ -156,21 +152,19 @@ const ContactForm = () => {
               required
               value={formData.message}
               onChange={handleChange}
-              placeholder=" "
-              className="peer block w-full border-0 border-b-2 border-gray-300 bg-transparent py-3 px-0 text-gray-900 focus:border-blue-600 focus:outline-none resize-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
             />
-            <label htmlFor="message" className="form-label">
-              Message
-            </label>
           </div>
 
-          {/* Submit */}
-          <button
-            type="submit"
-            className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 py-3 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-blue-800 transition duration-300"
-          >
-            Submit
-          </button>
+          {/* Submit Button */}
+          <div>
+            <button
+              type="submit"
+              className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 py-3 text-white font-semibold hover:from-blue-700 hover:to-blue-800 transition duration-300"
+            >
+              Submit
+            </button>
+          </div>
         </motion.form>
       </div>
     </section>
